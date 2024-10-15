@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZOC - Path generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" sizes="512x512" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+<body onLoad="onStart()">
+    <div>
+    <!-- Dark/Light Mode Toggle -->
+        <div class="theme-toggle">
+            <label class="switch">
+                <input type="checkbox" id="themeSwitcher">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div id="popup" class="popup">Code copied to clipboard</div>
+    </div>
+
+    <div class="container">
+        <h2>ZOC - Path generator</h2>
+        <div class="grid-container" id="grid">
+            <!-- Die Punkte werden durch JavaScript hinzugefügt -->
+        </div>
+
+        <!-- Scrollbarer Container für die Liste -->
+        <div id="distances">
+            <ul id="distanceList"></ul>
+        </div>
+
+        <div>
+            <button id="resetButton" class="button" onclick="resetAll()">Reset All</button>
+            <button id="exportButton" class="button" onclick="exportPath()">Export Path</button>
+        </div>
+
+        <div id="exports">
+            <button onclick="copy()" id="copyButton" class="button" style="float: right;">Copy code</button>
+            <ul id="exportList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
